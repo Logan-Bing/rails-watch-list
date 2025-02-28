@@ -5,12 +5,31 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-
+    <script src="https://kit.fontawesome.com/69af44d716.js" crossorigin="anonymous"></script>
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
     <%= javascript_importmap_tags %>
   </head>
 
-  <body>
+  <div class="main-container">
+    <div class="header">
+      <div class="onglets">
+        <p><%= link_to "Dashboard", lists_path, class:"dashboard" %></p>
+        <p>Movies</p>
+        <p>Series</p>
+        <p>Kids</p>
+      </div>
+      <div class="avatar">
+        <img src="" alt="">
+        <div class="search-container">
+          <i class="fa-brands fa-searchengin search-icon"></i>
+          <input type="text" class="search-bar" placeholder="Search a movie">
+        </div>
+      </div>
+    </div>
+    <body>
     <%= yield %>
-  </body>
+    </body>
+  </div>
+
+
 </html>
